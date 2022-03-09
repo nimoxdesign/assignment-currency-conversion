@@ -1,0 +1,19 @@
+@function hexToRgb($hex, $valueOnly: true) {
+    $rgb: red($hex) + ", " + green($hex) + ", " + blue($hex);
+    
+    @if ($valueOnly == true) {
+        @return $rgb;
+    } @else {
+        @return "rgb(" + $rgb + ")";
+    }
+}
+
+@function hexToRgba($hex, $opacity, $valueOnly: true) {
+    $rgba: hexToRgb($hex) + ", " + $opacity;
+
+    @if ($valueOnly == true) {
+        @return $rgba;
+    } @else {
+        @return "rgba(" + $rgba + ")";
+    }
+}

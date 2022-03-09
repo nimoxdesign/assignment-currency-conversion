@@ -1,0 +1,17 @@
+@if ($media-common == true) {
+    .page-footer {
+        .copyright {
+            text-align: center;
+        }
+    }
+}
+
+@if ($media-common == false) {
+    @media (min-width: $screen-md) {
+        .page-footer {
+            .copyright {
+                text-align: left;
+            }
+        }
+    }
+}

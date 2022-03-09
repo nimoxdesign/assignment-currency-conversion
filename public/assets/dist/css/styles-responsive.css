@@ -1,0 +1,32 @@
+@media (min-width: 1024px) {
+  .page-registration .customer-registration .container {
+    padding: 3rem;
+    background-color: var(--color-lightgray); }
+  .page-footer__middle {
+    padding-top: 5rem;
+    padding-bottom: 5rem; }
+  .page-footer__bottom .row {
+    flex-direction: row; }
+    .page-footer__bottom .row > * {
+      width: auto; }
+  .page-login .customer-login {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .page-login .customer-login .container {
+      padding: 3rem;
+      background-color: var(--color-lightgray); }
+  .newsletter {
+    flex-direction: row; }
+    .newsletter__header {
+      margin-right: 1rem;
+      margin-bottom: 0; }
+  .footer-links-wrapper {
+    display: flex; }
+  .footer-links {
+    flex: 1 0 25%; }
+  .page-footer .copyright {
+    text-align: left; }
+  .page-footer .payment-methods {
+    margin-left: auto;
+    text-align: right; } }

@@ -1,0 +1,23 @@
+@if ($media-common == true) {
+    .page-footer {
+        .payment-methods {
+            text-align: center;
+        }
+
+        .payment-method {
+            display: inline-block;
+            padding: 0.2rem;
+        }
+    }
+}
+
+@if ($media-common == false) {
+    @media (min-width: $screen-md) {
+        .page-footer {
+            .payment-methods {
+                margin-left: auto;
+                text-align: right;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "toplook-assets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "webpack",
+    "build:prod": "cross-env NODE_ENV=production webpack",
+    "watch:dev": "webpack --watch",
+    "watch:prod": "cross-env NODE_ENV=production webpack --watch",
+    "test:app": "node ./dist/js/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/node": "^7.16.5",
+    "@babel/plugin-proposal-private-methods": "^7.16.11",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/runtime-corejs2": "^7.16.5",
+    "@wordpress/babel-preset-default": "^2.1.0",
+    "autoprefixer": "^9.8.8",
+    "babel-loader": "^8.2.3",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "extract-loader": "^2.0.1",
+    "file-loader": "^2.0.0",
+    "node-sass": "^4.9.3",
+    "nodemon": "^2.0.15",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^8.0",
+    "postcss-combine-media-query": "^1.0.1",
+    "postcss-loader": "^4.3.0",
+    "postcss-move-media": "^1.0.0-pre",
+    "postcss-sort-media-queries": "^3.12.13",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "basiclightbox": "^5.0.4",
+    "dotenv": "^8.6.0",
+    "jquery": "^3.6.0",
+    "lightgallery.js": "^1.4.0",
+    "swiper": "^7.3.3"
+  }
+}

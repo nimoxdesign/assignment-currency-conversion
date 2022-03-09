@@ -1,0 +1,12 @@
+@if ($media-common == false) {
+    @media (min-width: $screen-md) {
+        .page-registration {
+            .customer-registration {
+                .container {
+                    padding: 3rem;
+                    background-color: var(--color-lightgray);
+                }
+            }
+        }
+    }
+}

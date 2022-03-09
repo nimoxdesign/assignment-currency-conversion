@@ -1,0 +1,103 @@
+{% block page_content %}
+    <div class="page-title-wrapper container">
+        <h1 class="page-title">
+            {{ 'Currency Conversion'|trans }}
+        </h1>
+    </div>
+
+    <div class="container">
+        <form name="currencyconversion" method="GET">
+            <div class="row">
+                <div class="form-group col-12 col-md-4 mb-4">
+                    <select class="form-control" data-cc="type:provider">
+                        {% for key,provider in providers %}
+                            <option value="{{ key }}">{{ provider.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group col-12 col-md-4 mb-4">
+                    <div class="input-group" data-cc="type:base">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                {{ 'Convert from'|trans }}
+                            </span>
+                        </div>
+                        <input type="number" 
+                            id="conversion-from" 
+                            class="form-control" 
+                            step="0.00000000001" 
+                            min="0.00000000001"
+                            data-cc="value:amount" />
+                        <select class="form-control" data-cc="value:code">
+                            {% for currency in currencies %}
+                                <option value="{{ currency.code }}">
+                                    {{ currency.code }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-12 col-md-4 mb-4">
+                    <div class="input-group" data-cc="type:target">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                {{ 'Convert to'|trans }}
+                            </span>
+                        </div>
+                        <input type="number" 
+                            id="conversion-to" 
+                            class="form-control" 
+                            step="0.00000000001" 
+                            min="0.00000000001" 
+                            readonly
+                            data-cc="value:amount" />
+                        <select class="form-control" data-cc="value:code">
+                            {% for currency in currencies %}
+                                <option value="{{ currency.code }}">
+                                    {{ currency.code }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="form-btn col-12 mb-4">
+                    <button type="submit" class="btn btn-primary">
+                        {{ 'Convert'|trans }}
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="currency-conversion__result-wrapper" data-cc="template:target">    
+        </div>
+    </div>
+
+    <template id="conversion-error">
+        <div class="currency-conversion__error alert alert-danger" data-cc="template:content"></div>
+    </template>
+
+    <template id="conversion-calculation">
+        <div class="currency-conversion__result" data-cc="template:content">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>{{ 'Code'|trans }}</th>
+                        <th>{{ 'Rate'|trans }}</th>
+                        <th>{{ 'Conversion'|trans }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th data-cc="output:base:code"></th>
+                        <td>1</td>
+                        <td data-cc="output:base:amount"></td>
+                    </tr>
+                    <tr>
+                        <th data-cc="output:target:code"></th>
+                        <td data-cc="output:target:rate"></td>
+                        <td data-cc="output:target:amount"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </template>
+{% endblock %}

@@ -1,0 +1,16 @@
+@if ($media-common == false) {
+    @media (min-width: $screen-md) {
+        .page-login {
+            .customer-login {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .container {
+                    padding: 3rem;
+                    background-color: var(--color-lightgray);
+                }
+            }
+        }
+    }
+}

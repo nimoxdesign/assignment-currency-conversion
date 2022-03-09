@@ -1,0 +1,102 @@
+:root {
+  --color-black:          #323232;
+  --color-black-rgb:      50, 50, 50;
+  --color-darkgray:       #808080;
+  --color-gray:           #c0c0c0;
+  --color-lightgray:      #f1f1f1;
+  --color-white:          #ffffff;
+  --color-primary:        #902065;
+  --color-primary-light:  #ba2982;
+  --color-primary-dark:   #661748;
+  --color-primary-rgb:    144, 32, 101;
+  --color-secondary:      #252525;
+  --color-secondary-rgb:  37, 37, 37;
+  --color-tertiary:       #daab72;
+  --color-tertiary-light: #ecdcc4;
+  --color-heading:        #902065;
+  --color-text:           #323232; }
+
+.page-header {
+  position: -webkit-sticky;
+  position: sticky; }
+
+.page-content {
+  padding-top: 3rem;
+  padding-bottom: 5rem; }
+
+.page-footer {
+  background-color: var(--color-lightgray); }
+  .page-footer__top {
+    padding-top: 2rem;
+    padding-bottom: 2rem; }
+  .page-footer__middle {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+  .page-footer__bottom {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: var(--color-black);
+    color: var(--color-white); }
+    .page-footer__bottom .row {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+
+.input-group > .input-group-append > .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.form-group-errors {
+  color: var(--bs-red); }
+  .form-group-errors ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+
+.page-title-wrapper {
+  margin-bottom: 3rem; }
+
+.page-header__top .navbar-wrapper {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem; }
+
+.page-header__top .navbar {
+  display: flex; }
+
+.page-header__top .nav-link {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.navbar-section--social {
+  margin-left: auto; }
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.footer-links {
+  margin-bottom: 1.5rem; }
+  .footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+
+.page-footer .copyright {
+  text-align: center; }
+
+.page-footer .payment-methods {
+  text-align: center; }
+
+.page-footer .payment-method {
+  display: inline-block;
+  padding: 0.2rem; }
+
+@media (min-width: 1024px) {
+  .page-content {
+    min-height: 100vh; } }
+
+@media (max-width: 1023px) {
+  .navbar-section--contact .nav-link__text {
+    display: none; } }

@@ -1,0 +1,18 @@
+@if ($media-common == true) {
+    // missing, adding back in
+    // https://getbootstrap.com/docs/4.0/components/input-group/
+    .input-group>.input-group-append>.btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .form-group-errors {
+        color: var(--bs-red); // Bootstrap variable
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@if ($media-common == true) {
+    @media (max-width: ($screen-md - 1)) {
+        .navbar-section {
+            &--contact {
+                .nav-link {
+                    &__text {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

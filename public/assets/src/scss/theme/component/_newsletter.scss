@@ -1,0 +1,21 @@
+@if ($media-common == true) {
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@if ($media-common == false) {
+    @media (min-width: $screen-md) {
+        .newsletter {
+            flex-direction: row;
+
+            &__header {
+                margin-right: 1rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

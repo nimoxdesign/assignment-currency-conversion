@@ -1,0 +1,14 @@
+@if ($media-common == true) {
+    .page-content {
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+}
+
+@if ($media-common == true) {
+    @media (min-width: $screen-md) {
+        .page-content {
+            min-height: 100vh;
+        }
+    }
+}

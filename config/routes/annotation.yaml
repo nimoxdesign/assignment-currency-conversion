@@ -1,0 +1,7 @@
+controllers:
+    resource: ../../src/Controller/
+    type: annotation
+
+controllers_currencyconversion:
+    resource: '../../src/CurrencyConversion/Controller/*'
+    type: annotation

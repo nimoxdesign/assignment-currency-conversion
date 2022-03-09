@@ -1,0 +1,23 @@
+@if ($media-common == true) {
+    .footer-links {
+        margin-bottom: 1.5rem;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+@if ($media-common == false) {
+    @media (min-width: $screen-md) {
+        .footer-links-wrapper {
+            display: flex;
+        }
+
+        .footer-links {
+            flex: 1 0 25%;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@if ($media-common == true) {
+    .page-header {
+        &__top {
+            .navbar-wrapper {
+                margin-left: -0.5rem;
+                margin-right: -0.5rem;
+            }
+
+            .navbar {
+                display: flex;
+            }
+
+            .nav-link {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}

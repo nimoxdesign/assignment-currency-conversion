@@ -1,0 +1,7 @@
+@if ($media-common == true) {
+    .navbar-section {
+        &--social {
+            margin-left: auto;
+        }
+    }
+}
